@@ -50,7 +50,7 @@
 
 5. **Baixe o script do GitHub usando**:
      ```bash
-     curl -o /sdcard/niquelbatterytools.sh https://raw.githubusercontent.com/niiquell/NqlBatteryTools/main/niquelbatterytools.sh && sed -i 's/\r$//' /sdcard/niquelbatterytools.sh
+     mkdir -p /sdcard/NqlBatteryTools && curl -o /sdcard/NqlBatteryTools/start.sh https://raw.githubusercontent.com/niiquell/NqlBatteryTools/main/start.sh && sed -i 's/\r$//' /sdcard/NqlBatteryTools/start.sh
 
 6. **Dê permissão Root para o Termux**:
      ```bash
@@ -58,11 +58,11 @@
 
 7. **Vá até o diretório onde o script está**:
      ```bash
-     cd /sdcard
+     cd /sdcard/NqlBatteryTools
 
 8. **Execute o Script**:
      ```bash
-     sh nickelbatterytools.sh
+     sh start.sh
 
 Caso dê tudo certo o menu aparecerá na tela, certifique-se de dar acesso root ao termux usando Magisk/KernelSU/Apatch.
 
