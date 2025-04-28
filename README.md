@@ -38,7 +38,7 @@
 2. **Execute o comando de instalação**:
    - Copie e cole o comando abaixo no Termux para instalar dependências, baixar o script, e configurar o comando `nbt start`:
      ```bash
-     pkg update && pkg upgrade -y && pkg install bc termux-api curl -y && curl -o ~/niquelbatterytools.sh https://raw.githubusercontent.com/Amogus3/Niquel-Battery-Tools/refs/heads/main/niquelbatterytools.sh && sed -i 's/\r$//' ~/niquelbatterytools.sh && chmod +x ~/niquelbatterytools.sh && mkdir -p ~/bin && echo -e '#!/bin/bash\nif [ "$1" = "start" ]; then\n  su -c ~/niquelbatterytools.sh\nelse\n  echo "Uso: nbt start"\nfi' > ~/bin/nbt && chmod +x ~/bin/nbt && echo "export PATH=\$PATH:~/bin" >> ~/.bashrc && source ~/.bashrc && echo "Configuração concluída! Use 'nbt start' para executar o script."
+     pkg update && pkg upgrade -y && pkg install bc termux-api curl -y && curl -o /sdcard/niquelbatterytools.sh https://raw.githubusercontent.com/niiquell/NqlBatteryTools/main/niquelbatterytools.sh && sed -i 's/\r$//' /sdcard/niquelbatterytools.sh && chmod +x /sdcard/niquelbatterytools.sh && mkdir -p ~/bin && echo -e '#!/bin/bash\nif [ "$1" = "start" ]; then\n  su -c /sdcard/niquelbatterytools.sh\nelse\n  echo "Uso: nbt start"\nfi' > ~/bin/nbt && chmod +x ~/bin/nbt && echo "export PATH=\$PATH:~/bin" >> ~/.bashrc && source ~/.bashrc && echo "Configuração concluída! Use 'nbt start' para executar o script."
 
 3. **Verifique a conclusão**:
    - Após a instalação, você verá: `Configuração concluída! Use 'nbt start' para executar o script.`
