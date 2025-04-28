@@ -16,7 +16,6 @@
 - **Configuração personalizável**: Ajuste o intervalo de atualização (mínimo 0.1s) com persistência em um arquivo de configuração.
 - **Integração com Telegram**: Opção "Ajuda" para abrir o grupo do Telegram ([@niiquell](https://t.me/niiquell)) para suporte.
 - **Interface interativa**: Menu intuitivo com navegação por números e tecla `q` para voltar.
-- **Comando personalizado**: Execute o script com `nbt start` após a configuração.
 - **Suporte a root e não-root**: Algumas métricas (ex.: porcentagem) funcionam sem root via `dumpsys`.
 
 ## Requisitos
