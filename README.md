@@ -33,18 +33,38 @@
 ## Instalação
 
 1. **Instale o Termux**:
-   - Baixe o [Termux](https://github.com/termux/termux-app) e o [Termux-API](https://github.com/termux/termux-api)
+   - Baixe o app do [Termux](https://github.com/termux/termux-app) e o [Termux-API](https://github.com/termux/termux-api)
 
-2. **Execute o comando de instalação**:
-   - Copie e cole o comando abaixo no Termux para instalar dependências, baixar o script, e configurar o comando `nbt start`:
+2. **Conceda permissão ao Termux para acessar o armazenamento**:
+   - Copie e cole o comando abaixo no Termux e permita a solicitação que aparecerá na tela.
      ```bash
-     pkg update && pkg upgrade -y && pkg install bc termux-api curl -y && curl -o /sdcard/niquelbatterytools.sh https://raw.githubusercontent.com/niiquell/NqlBatteryTools/main/niquelbatterytools.sh && sed -i 's/\r$//' /sdcard/niquelbatterytools.sh && chmod +x /sdcard/niquelbatterytools.sh && mkdir -p ~/bin && echo -e '#!/bin/bash\nif [ "$1" = "start" ]; then\n  su -c /sdcard/niquelbatterytools.sh\nelse\n  echo "Uso: nbt start"\nfi' > ~/bin/nbt && chmod +x ~/bin/nbt && echo "export PATH=\$PATH:~/bin" >> ~/.bashrc && source ~/.bashrc && echo "Configuração concluída! Use 'nbt start' para executar o script."
+     termux-setup-storage
 
-3. **Verifique a conclusão**:
-   - Após a instalação, você verá: `Configuração concluída! Use 'nbt start' para executar o script.`
+3. **Atualize os pacotes do Termux**:
+     ```bash
+     pkg update && pkg upgrade -y
 
-## Uso
+4. **Instale os pacotes necessários**:
+     ```bash
+     pkg install bc termux-api curl -y
 
-1. **Inicie o script**:
-   ```bash
-   nbt start
+5. **Baixe o script do GitHub usando**:
+     ```bash
+     curl -o /sdcard/niquelbatterytools.sh https://raw.githubusercontent.com/niiquell/NqlBatteryTools/main/niquelbatterytools.sh && sed -i 's/\r$//' /sdcard/niquelbatterytools.sh
+
+6. **Dê permissão Root para o Termux**:
+     ```bash
+     su
+
+7. **Vá até o diretório onde o script está**:
+     ```bash
+     cd /sdcard
+
+8. **Execute o Script**:
+     ```bash
+     sh nickelbatterytools.sh
+
+Caso dê tudo certo o menu aparecerá na tela, certifique-se de dar acesso root ao termux usando Magisk/KernelSU/Apatch.
+
+## Executar o Script Novamente
+nas próximas vezes que for executar o script basta repetir os passos: **6**, **7** e **8**.
