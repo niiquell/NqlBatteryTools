@@ -225,7 +225,7 @@ configure_settings() {
 # Menu principal
 while true; do
     clear
-    echo "=== Monitor de Bateria para Termux ==="
+    echo "=== NqlBatteryTools ==="
     echo "Selecione uma opção:"
     echo "1. Ver vida útil da bateria (%)"
     echo "2. Ver porcentagem atual da bateria"
